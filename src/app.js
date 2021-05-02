@@ -13,8 +13,8 @@ const express = require("express");
 const hbs = require("hbs");
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/weather");
-const dotenv = require("dotenv");
-dotenv.config();
+// const dotenv = require("dotenv");
+// dotenv.config();
 
 // setting up port value
 const port = process.env.port || 3000;

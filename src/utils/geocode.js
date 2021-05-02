@@ -1,16 +1,19 @@
 const request = require("postman-request");
-const dotenv = require("dotenv");
-dotenv.config();
+// const dotenv = require("dotenv");
+// dotenv.config();
 
 // First we will put a address into mapbox API ane it will return us the co-ordinates
 // encodeURIComponent function will take care of special character conversion
+
+MAPBOX_KEY =
+    "pk.eyJ1IjoiZGhhdmFsLWNoYW5nYW5pIiwiYSI6ImNrbjFpM3IxYTBtbnkybmxydzU2aTIxMjcifQ.Jl8-WAK10F9F3hLN_w3_Uw";
 
 const geocode = (address, callback) => {
     const url =
         "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
         encodeURIComponent(address) +
         ".json?access_token=" +
-        process.env.MAPBOX_KEY +
+        MAPBOX_KEY +
         "&limit=1";
 
     request({ url, json: true }, (error, { body } = {}) => {

@@ -17,7 +17,7 @@ const forecast = require("./utils/weather");
 // dotenv.config();
 
 // setting up port value
-const port = process.env.port || 3000;
+const port = process.env.PORT || 5000;
 
 // setting up the express app
 const app = express();

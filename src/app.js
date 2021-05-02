@@ -83,5 +83,5 @@ app.get("/weather", (req, res) => {
 });
 
 app.listen(port, (req, res) => {
-    console.log("http://localhost:3000");
+    console.log(`http://localhost:${port}`);
 });

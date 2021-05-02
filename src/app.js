@@ -17,7 +17,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 // setting up port value
-const port = 3000;
+const port = process.env.port || 3000;
 
 // setting up the express app
 const app = express();
